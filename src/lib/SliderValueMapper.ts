@@ -27,7 +27,7 @@ export default class SliderValueMapper {
     }
   }
 
-  public sliderValueToValue(sliderValue): number {
+  public map(sliderValue: number): number {
     if (this.isExp) {
       return Math.exp((sliderValue - this.sliderMin) * this.scaleLog + this.minLog);
     }
@@ -35,7 +35,7 @@ export default class SliderValueMapper {
     return this.valueMin + sliderFactor * (this.valueMax - this.valueMin);
   }
 
-  public valueToSliderValue(value): number {
+  public reverseMap(value: number): number {
     if (this.isExp) {
       return this.sliderMin + (Math.log(value) - this.minLog) / this.scaleLog;
     }
