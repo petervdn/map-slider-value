@@ -19,10 +19,10 @@ const mapper = new SliderValueMapper(1000, 2000);
 After that there are two methods you can call to convert values back and forth.
 ```typescript
 // if your slider is value 50
-mapper.map(50); // results in 1500
+mapper.map(50); // returns 1500
 
 // if you want to set your slider on the correct position from a given value
-mapper.reverseMap(1500); // results in 50
+mapper.reverseMap(1500); // returns 50
 ```
 
 While the example above maps everything in a linear fashion, setting the 3rd parameter to `true` when creating the mapper results in an exponential output. This is for example useful when controlling an audio frequency.
@@ -31,12 +31,12 @@ While the example above maps everything in a linear fashion, setting the 3rd par
 const exponentialMapper = new SliderValueMapper(20, 20000, true);
 ```
 
-__You can not set the minimum value to 0 when using an exponential mapping. This will throw an error.__
+__Setting the minimum value to 0 when using exponential mapping will throw an error. You can circumvent this by using a very small minimum value (0.00001)__
 
 ## non-default slider range
-If the slider doesn't go from 0 to 100 you can declare its  minimum and maximum values in the constructor. 
+If the slider you're using doesn't go from 0 to 100 you can declare its minimum and maximum as the 4th and 5th parameter: 
 
 ```typescript
-new SliderValueMapper(1000, 2000, false, 0, 50); // linear
-new SliderValueMapper(1000, 2000, true, 0, 50);  // exp 
+new SliderValueMapper(1000, 2000, false, 10, 50); // linear
+new SliderValueMapper(1000, 2000, true, 10, 50);  // exp 
 ``` 
