@@ -31,7 +31,7 @@ While the example above maps everything in a linear fashion, setting the 3rd par
 const exponentialMapper = new SliderValueMapper(20, 20000, true);
 ```
 
-__Setting the minimum value to 0 when using exponential mapping will throw an error. You can circumvent this by using a very small minimum value (0.00001)__
+__Setting the minimum value to 0 when using exponential mapping will throw an error, since you cannot exponentially grow from 0. You can circumvent this by using a very small minimum value (0.00001)__
 
 ## non-default slider range
 If the slider you're using doesn't go from 0 to 100 you can declare its minimum and maximum as the 4th and 5th parameter: 
