@@ -1,6 +1,6 @@
 # map-slider-value
 
-Maps values from a linear range to another range, which can be either linear or exponential. Most likely usecase is in combination with an `<input type="range">`.
+Maps values from a linear range to another range, which can be either linear or exponential. Most likely usecase is in combination with a slider, like `<input type="range">`.
 
 ## install
 ```sh
