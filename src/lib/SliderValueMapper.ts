@@ -14,6 +14,12 @@ export default class SliderValueMapper {
         'Cannot set valueMin to 0 when using exponential scale (use something small like 0.00001)',
       );
     }
+    if (valueMax <= valueMin) {
+      throw new Error('valueMax should be greater than valueMin');
+    }
+    if (sliderMax <= sliderMin) {
+      throw new Error('sliderMax should be greater than sliderMin');
+    }
     this.valueMin = valueMin;
     this.valueMax = valueMax;
     this.sliderMin = sliderMin;
