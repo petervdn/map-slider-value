@@ -10,9 +10,7 @@ export default class SliderValueMapper {
 
   constructor(valueMin: number, valueMax: number, isExp = false, sliderMin = 0, sliderMax = 100) {
     if (valueMin === 0 && isExp) {
-      throw new Error(
-        'Cannot set valueMin to 0 when using exponential scale (use something small like 0.00001)',
-      );
+      throw new Error('Cannot set valueMin to 0 when using exponential scale');
     }
     if (valueMax <= valueMin) {
       throw new Error('valueMax should be greater than valueMin');
