@@ -3,8 +3,9 @@
 Maps values from a linear range to another range, which can be either linear or exponential. Most likely usecase is in combination with an `<input type="range">`.
 
 ## install
-
+```sh
 npm install map-slider-value
+```
 
 ## usage
 
@@ -27,8 +28,6 @@ mapper.inverseMap(1500); // results in 50
 While the example above maps everything in a linear fashion, setting the 3rd parameter to `true` when creating the mapper results in an exponential output. This is for example useful when controlling an audio frequency.
 
 ```typescript
-import SliderValueMapper from 'map-slider-value';
-
 const exponentialMapper = new SliderValueMapper(20, 20000, true);
 ```
 
