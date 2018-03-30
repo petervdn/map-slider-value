@@ -22,7 +22,7 @@ After that there are two methods you can call to convert values back and forth.
 mapper.map(50); // results in 1500
 
 // if you want to set your slider on the correct position from a given value
-mapper.inverseMap(1500); // results in 50
+mapper.reverseMap(1500); // results in 50
 ```
 
 While the example above maps everything in a linear fashion, setting the 3rd parameter to `true` when creating the mapper results in an exponential output. This is for example useful when controlling an audio frequency.
